@@ -24,7 +24,7 @@ connectedness |>
   scale_x_log10(labels = scales::comma_format()) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
-  labs(title = "US County Populations versus Economic connectedness", 
+  labs(title = "US County Populations versus Economic Connectedness", 
                     subtitle = "Population size does not matter to EC",
                     x = "Population",
                     y = "Economic Connectedness",
