@@ -28,6 +28,6 @@ connectedness |>
                     subtitle = "Population size does not matter to EC",
                     x = "Population",
                     y = "Economic Connectedness",
-                    caption = "Opportunity Insights")
+                    caption = "Opportunity Insights") + 
+  coord_fixed(ratio = 1/.75)
 ```
-
