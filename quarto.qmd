@@ -1,0 +1,33 @@
+---
+title: "Counties"
+author: "Ayodeji Adesegun"
+format: html
+execute: 
+  echo: false
+---
+
+```{r}
+#| message: false
+#| label: setup
+
+library(tidyverse)
+library(primer.data)
+```
+
+```{r}
+#| label: make-plot
+#| warning: false
+
+connectedness |> 
+  ggplot(aes(x = population,
+             y = connectedness)) +
+  scale_x_log10(labels = scales::comma) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "US County Populations versus Economic connectedness", 
+                    subtitle = "Population size does not matter to EC",
+                    x = "Population",
+                    y = "Economic Connectedness",
+                    caption = "Opportunity Insights")
+```
+
