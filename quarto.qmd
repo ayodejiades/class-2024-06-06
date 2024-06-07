@@ -21,7 +21,7 @@ library(primer.data)
 connectedness |> 
   ggplot(aes(x = population,
              y = connectedness)) +
-  scale_x_log10(labels = scales::comma) +
+  scale_x_log10(labels = scales::comma_format()) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
   labs(title = "US County Populations versus Economic connectedness", 
